@@ -6,8 +6,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <button>"Empezar"</button>
+    <header class="header">
+      <h1>Pokémon</h1>
+    </header>
+    <nav class="nav">
+      <p>Aquí va ir el menú</p>
+    </nav>
+    <section class="section1">
+      <h2>Buscar por</h2>
+    </section>
+   
+    <!-- Sección de inputs -->
+    <section class="section2">
+      <label class="nameLabel">Nombre</label>
+      <input class="nameInput" id="name" type="text">
+
+      <label class="kindLabel">Tipo </label>
+      <input class="kindInput" id="kind" type="text">
+
+      <label class="skillLabel">Habilidad</label>
+      <input class="skillInput" id="skill" type="text">
+
+      <label class="weaknessLabel">Debilidad</label>
+      <input class="weaknessInput" id="weakness" type="text">
+    </section>
+    <section class="section3">
+      En esta sección se va a desplegar los pokemones buscados
+    </section>
+    <button type="submit" id="search">Buscar</button>
+    <!-- Msj de error -->
+    <div id="root">:(</div>
     <script src="main.js" type="module"></script>
+    <footer></footer>
   </body>
 </html>
