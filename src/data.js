@@ -1,20 +1,21 @@
-//aquí voy a  contruir las funciones para manipular mis datos.
-//primero hay que hacer una función que me filtre mis datos por nombre
+// estas funciones son de ejemplo
+
+
 export function namePokemon (data, name) {
-  const namePoke= name;
-  for (let i = 0; i< data.length; i++){
+  const namePoke = name;
+  const nombreActualizado = [];
+  for (let i = 0; i < data.length; i++){
+    /*console.log(data[i].name)*/
     if(data[i].name === namePoke){
-      return(data[i]);
+      nombreActualizado.push(data[i]);
+      console.log(nombreActualizado);
+    }else {
+      return "incorrecto"
     }
   }
 }
-//filtrar por habilidad 
+
+
 export const anotherExample = () => {
   return 'OMG';
 };
-
-//Filtro por debilidad 
-
-
-
-
