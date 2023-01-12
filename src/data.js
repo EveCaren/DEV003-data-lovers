@@ -9,9 +9,13 @@ export function namePokemon (data, name) {
   }
 }
 //filtrar por habilidad 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// export function (){
+//   const = ;
+//   for (let i=0; i < .length; i++)
+//     if(data[i]. === ){
+//       return(data[i]);
+// }
+// };
 
 //Filtro por debilidad 
 
