@@ -5,6 +5,7 @@ export function namePokemon (data, name) {
   for (let i = 0; i< data.length; i++){
     if(data[i].name === namePoke){
       return(data[i]);
+      
     }
   }
 }
