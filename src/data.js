@@ -24,24 +24,6 @@ export function namePokemon (data, name) {
 //quiero filtrar datos por habilidad y debilidad 
 
 
-<<<<<<< HEAD
-=======
-
-export function namePokemon (data, name) {
-  const namePoke = name;
-  const nombreActualizado = [];
-  for (let i = 0; i < data.length; i++){
-    /*console.log(data[i].name)*/
-    if(data[i].name === namePoke){
-      nombreActualizado.push(data[i]);
-      console.log(nombreActualizado);
-    }else {
-      return "incorrecto"
-    }
-  }
-}
-
->>>>>>> c08340b193573a56a84c26d28f1aa202d417ab6b
 
 export const anotherExample = () => {
   return 'OMG';
