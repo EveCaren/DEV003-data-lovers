@@ -6,11 +6,18 @@ const botonSearch = document.getElementById("search");
 botonSearch.addEventListener("click", botonName); 
 function botonName(event){
   event.preventDefault();
-  const inputName = document.querySelector("name");
+  const inputName = document.getElementById("name").value;
   const nombreFiltrado = namePokemon(pokemones, inputName);//aquí probamos la función
-  console.log(`Tu pokemon es ${nombreFiltrado}`);
-}
+  console.log(nombreFiltrado);
 
+
+  const card = `
+  <div class ="card">
+    <h3>${nombreFiltrado.name}</h3>
+  </div>
+  `;
+  document.body.innerHTML = card;
+}
 
 /*for (let i = 0; i< pokemones.length; i++){
     console.log(pokemones[i])
