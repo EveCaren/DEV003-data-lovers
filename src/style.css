@@ -19,21 +19,21 @@
 }
 .menu li{
     list-style: none;
-    margin: 2%;
+    margin:2%;
 }
 .menu li a{
-    font-size: 4rem;
+    font-size: 7rem;
     font-family:chewy;
     text-decoration: none;
     color: #FACA03;
+    letter-spacing: 0.5rem;
 }
 .mainPrincipal{
     background-color: #D9D9D9;
     background-position: center center;
     width: 96%;
-    padding: 5% 0% 100%;
+    padding: 2% 0% 100%;
     margin-left: 2%;
-    /*margin-right: 2%;*/
     margin-top: 3%;
     border-radius: 10px;
 }
@@ -41,34 +41,55 @@
     color: #FACA03;
     text-align: center;
     font-family:chewy;
-    font-size: 6rem;
+    font-size: 9rem;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 0.5rem;
 }
 .search{
     color: #FACA03;
     text-align: center;
-    font-size: 4rem;
+    font-size: 7rem;
     font-family:chewy;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 0.5rem;
+    padding: 0.5%;
 }
 .section1{
     background-color: #1F3956;
     width: 100%;
-    padding: 3% 0%;
+    /* padding: 0.5% 0%; */
+}
+.sectionAbc{
+    padding: 50px;
+}
+#orderSelect{
+    width: 40rem;
+    height: 5rem;
+    border-radius: 2rem;
+    font-size: 3rem;
+    display: block;
+    text-align-last: center;
 }
 .section2{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 50px;
+}
+.nameLabel{
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-form input {
-width: ;
-height: ;
+.nameInput{
+    width: 40rem;
+    height: 5rem;
+    border-radius: 2rem;
+    font-size: 3rem;
 }
-
 .button {
     display: flex;
     justify-content: center;
-    
+    padding-bottom: 35px;
   }
 #search{
     /* display: inline-block; */
@@ -77,9 +98,10 @@ height: ;
     background-color: #1F3956;
     padding: 8px 12px ;
     border-color: #FACA03;
-    border-radius: 10px;
-    font-size: 3rem;
+    border-radius: 2rem;
+    font-size: 5rem;
     font-family:chewy;
+    letter-spacing: 0.5rem;
 }
 .footer{
     margin-top: auto;
@@ -87,7 +109,7 @@ height: ;
     height: 100%;
     background: #1F3956;
     color: #FACA03;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
     text-align: center;
@@ -105,8 +127,8 @@ height: ;
 }
 
 .footer .redes img {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     display: inline-block;
     justify-content: center;
     align-items: center;
