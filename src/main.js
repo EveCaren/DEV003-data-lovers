@@ -1,4 +1,4 @@
-import {namePokemon} from './data.js';
+import {namePokemon, abcOrder} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemones = data.pokemon; //creamos un variable que iba a contener los datos para poder acceder a ellos. 
@@ -23,7 +23,22 @@ function botonName(event){
     console.log(pokemones[i])
 }este es una prueba*/
 
+//filtro por nombre
 
+const ordenpokemones = abcOrder(pokemones,'z-a');
+console.log(ordenpokemones);
 
+/*const orden= pokemones.sort((a,b) => {
+  const nameA= a.name.toLowerCase();
+  const nameB= b.name.toLowerCase();
+  if (nameA<nameB){
+    return-1;
+  }
+  if (nameA>nameB){
+    return 1;
+  }
+  return 0;
+})
+console.log(orden);*/
 
 
