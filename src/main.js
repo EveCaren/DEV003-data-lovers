@@ -25,7 +25,7 @@ function botonName(event){
 
 //filtro por nombre
 
-const ordenpokemones = abcOrder(pokemones,'z-a');
+const ordenpokemones = abcOrder(pokemones,'A-Z');
 console.log(ordenpokemones);
 
 /*const orden= pokemones.sort((a,b) => {

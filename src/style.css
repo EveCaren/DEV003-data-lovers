@@ -1,3 +1,35 @@
+/* Inicio */
+.body__inicio{
+    background-image:  url(./img/fondoInicio.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.main__inicio{
+    padding: 2% 0% 100%;
+}
+.menu__inicio{
+    width: 96%;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+}
+.menu__inicio li{
+    list-style: none;
+    margin:2%;
+    background-color:#1F3956;
+    border-radius: 20px;
+    padding: 0.5% 1.5%;
+}
+.menu__inicio li a{
+    font-size: 7rem;
+    font-family:chewy;
+    text-decoration: none;
+    color: #FACA03;
+    letter-spacing: 0.5rem;
+}
+/* pokedex */
 .nav{
     width: 100%;
 }
@@ -133,4 +165,5 @@
     justify-content: center;
     align-items: center;
     }
+
 
