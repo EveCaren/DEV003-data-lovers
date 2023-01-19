@@ -44,15 +44,15 @@
             <input class="nameInput" id="skill" type="text">
             <input class="nameInput" id="weakness" type="text">
         </section>
-        <!-- <section class="section3">
-          En esta sección se va a desplegar los pokemones buscados
-        </section> -->
         <div class="button">
           <button type="submit" id="search">Buscar</button>
         </div>
       </section>
+      <section class="section3">
+        En esta sección se va a desplegar los pokemones buscados
+      </section>
       <!-- Msj de error -->
-      <div id="root">:(</div>
+      <div id="root"class="row" id="items"></div>
     </main>
     <script src="main.js" type="module"></script>
 
@@ -78,5 +78,12 @@
       </div>
       
     </footer>
+    <template id="template__card">
+      <figure class="card">
+        <img>
+        <figcaption></figcaption>
+      </figure>
+      <button class="feature">Características</button>
+    </template>
   </body>
 </html>
