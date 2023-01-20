@@ -5,6 +5,7 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Chewy" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -49,7 +50,6 @@
         </div>
       </section>
       <section class="section3">
-        En esta sección se va a desplegar los pokemones buscados
       </section>
       <!-- Msj de error -->
       <div id="root"class="row" id="items"></div>
@@ -78,12 +78,25 @@
       </div>
       
     </footer>
-    <template id="template__card">
+    <!-- tarjetas de inicio -->
+    <template class="template__card" id="template__card">
       <figure class="card">
         <img>
         <figcaption></figcaption>
+        <p></p>
+        <button class="feature" id="feature">Características</button>
       </figure>
-      <button class="feature">Características</button>
+    </template>
+    <!-- card con características específicas -->
+    <template class="card__pokemon" id="card__pokemon">
+      <h1></h1>
+      <figure class="card_character">
+        <img>
+        <p></p>
+      </figure>
+      <div></div>
+      <div></div>
+      <div></div>
     </template>
   </body>
 </html>
