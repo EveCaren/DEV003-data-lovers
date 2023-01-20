@@ -44,4 +44,3 @@ export function abcOrder (data, order){
     return inverso;
   }
 }
-
