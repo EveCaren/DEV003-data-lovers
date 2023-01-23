@@ -202,3 +202,16 @@
     justify-content: center;
     align-items: center;
     }
+/* estilo al mensaje de error */
+.noFound{
+    size: 45px;
+    background-color: aqua;
+}
+/* estilo a la cartilla de características */
+.card__pokemon{
+    grid-template-columns: auto auto auto;
+    width: 500px;
+    height: 150px;
+    border: red;
+    background-color: #FACA03;
+}

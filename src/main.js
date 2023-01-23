@@ -1,15 +1,15 @@
-import {namePokemon, abcOrder} from './data.js';
+import {namePokemon, idPokemon, abcOrder} from './data.js';
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 const pokemones = data.pokemon; //creamos un variable que iba a contener los datos para poder acceder a ellos.
 //orden por número 
 
-const $cards = document.querySelector(".section3"),
+const $container = document.querySelector(".section3"),
   $template = document.getElementById("template__card").content,
   $fragment = document.createDocumentFragment();
-$cards.addEventListener("click,", e => {
-  console.log(e)
-});
+// $cards.addEventListener("click,", e => {
+//   console.log(e)
+//});
 pokemones.forEach(el =>{
   $template.querySelector("img").setAttribute("src",el.img);
   $template.querySelector("img").setAttribute("alt",el.num);
@@ -19,8 +19,40 @@ pokemones.forEach(el =>{
   let $clone = document.importNode($template,true);
   $fragment.appendChild($clone);
 });
-$cards.appendChild($fragment);
+$container.appendChild($fragment);
 
+evento 
+const botones = document.querySelectorAll(".feature");
+botones.forEach((el)=> el.addEventListener("click", e=>{
+  const idBoton = e.target.getAttribute("data-id");
+  console.log(idBoton);
+  const numFiltrado = idPokemon(pokemones, idBoton);
+  console.log(numFiltrado);
+  const $cards = document.querySelector(".section3"),
+        $template = document.getElementById("card__pokemon").content,
+        $fragment = document.createDocumentFragment();
+      $cards.innerHTML = "";
+      numFiltrado.forEach(el =>{
+        $template.querySelector("h1").textContent =el.name;
+        $template.querySelector("img").setAttribute("src",el.img);
+        $template.querySelector("img").setAttribute("alt",el.num);
+        $template.querySelector("p").textContent =`No. ${el.num}`;
+        $template.querySelector(".group2").textContent =`
+        Height:${el.size.height} 
+        Weight: ${el.size.weight}`;
+        //Pokemon Rarity: ${el.pokemonrarity}
+        $template.querySelector(".group3").textContent =`
+        About:${el.about}`;
+        $template.querySelector(".group4").textContent =`
+        Type ${el.type}
+        Resistant:${el.resistant} 
+        Weaknesses: ${el.weaknesses}
+        Type ${el.type}`;
+        let $clone = document.importNode($template,true);
+        $fragment.appendChild($clone);
+      });
+      $cards.appendChild($fragment);
+}))
 
 // este es el evento que busca un pokemon por nombre 
 const botonSearch = document.getElementById("search");
@@ -95,5 +127,3 @@ function botonName(event){
     // });
     // $cards.appendChild($fragment);
 //   }
-//   e.stopPropagation();
-// }

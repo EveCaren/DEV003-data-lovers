@@ -11,7 +11,18 @@ export function namePokemon (data, name) {
   }
   return filtroName
 }
-
+//Filtro por número
+export function idPokemon (data, num) {
+  const filtroNum = [];
+  const numPoke= num;
+  for (let i = 0; i< data.length; i++){
+    if(data[i].num === numPoke){
+      filtroNum.push(data[i]);
+      
+    }
+  }
+  return filtroNum
+}
 //filtrar por habilidad 
 // export function (){
 //   const = ;
