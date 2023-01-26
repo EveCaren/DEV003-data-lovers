@@ -18,21 +18,18 @@ export function idPokemon (data, num) {
   for (let i = 0; i< data.length; i++){
     if(data[i].num === numPoke){
       filtroNum.push(data[i]);
-      
     }
   }
   return filtroNum
 }
-//filtrar por habilidad 
-// export function (){
-//   const = ;
-//   for (let i=0; i < .length; i++)
-//     if(data[i]. === ){
-//       return(data[i]);
-// }
+//filtrar por debilidad 
+// export function (data,weaknesses){
+//  const = ;
+//   for (let i=0; i <data.length; i++)
+//     if(data[i]. === weaknesses){
+//     return(data[i]);
+//     }
 // };
-
-//Filtro por debilidad 
 
 
 // filtro por orden alfabético
