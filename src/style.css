@@ -116,7 +116,7 @@
     justify-content: center;
     padding-bottom: 1rem;
   }
-#search{
+#search, #button__order{
     margin-top: 1rem;
     color: #FACA03;
     background-color: #1F3956;
@@ -278,7 +278,7 @@
     padding: 16px;
     justify-content: left;
 }
-#newSearch{
+#newSearch, .rise{
     margin-top: 1rem;
     width: 150px;
     color: #FACA03;
