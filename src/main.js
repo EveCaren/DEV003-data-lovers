@@ -1,5 +1,5 @@
-import { namePokemon, idPokemon, abcOrder } from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
+import { namePokemon, idPokemon, abcOrder, weakPokemon } from './data.js';
+//import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 const pokemones = data.pokemon; //creamos un variable que iba a contener los datos para poder acceder a ellos.
 
@@ -13,18 +13,19 @@ function drawCards(pokemon) {
   $template.querySelector("p").textContent = `No. ${pokemon.num}`;
   $template.querySelector("figcaption").textContent = pokemon.name;
   $template.querySelector(".feature").dataset.id = pokemon.num;
-  let $clone = document.importNode($template, true);
+  const $clone = document.importNode($template, true);
   $fragment.appendChild($clone);
   $container.appendChild($fragment);
 }
 //Función que realiza el evento de los botones "feature" de cada card, debe llamarse cada que se ejecute drawcards
 function eventFeature() {
   const feature = document.querySelectorAll(".feature");
-  console.log(eventFeature);
+  //console.log(eventFeature);
   for (let i = 0; i < feature.length; i++) {
     feature[i].addEventListener("click", e => {
-      console.log(e.target);
+      //console.log(e.target);
       const idBoton = e.target.getAttribute("data-id");
+      //console.log(idBoton);
       const pokemon = idPokemon(pokemones, idBoton)
       drawFeature(pokemon)
     });
@@ -34,8 +35,8 @@ function eventFeature() {
 //función que nos regresa a las cards principales
 function newSearch(){
   const buttonNewSearch = document.getElementById("newSearch");
-  buttonNewSearch.addEventListener("click", e =>{
-    console.log(buttonNewSearch);
+  buttonNewSearch.addEventListener("click", () =>{
+    //console.log(buttonNewSearch);
     const $container = document.querySelector(".section3");
     $container.innerHTML = "";
     pokemones.forEach(pokemon => { drawCards(pokemon) });
@@ -54,21 +55,21 @@ function drawFeature(pokemon) {
     $template.querySelector("img").setAttribute("alt", el.num);
     $template.querySelector("p").textContent = `No. ${el.num}`;
     $template.querySelector(".group2").textContent = `
-         Height:${el.size.height} 
-        Height:${el.size.height} 
-         Height:${el.size.height} 
+         Height: ${el.size.height} 
+        Height: ${el.size.height} 
+         Height: ${el.size.height} 
          Weight: ${el.size.weight}
          Pokemon Rarity: ${el["pokemon-rarity"]}`;
     $template.querySelector(".group3").textContent = `
-         About:${el.about}`;
+         About: ${el.about}`;
     $template.querySelector(".group4").textContent = `
          Type: ${el.type}
-         Resistant:${el.resistant} 
-        Resistant:${el.resistant} 
-         Resistant:${el.resistant} 
+         Resistant: ${el.resistant} 
+         Resistant: ${el.resistant} 
+         Resistant: ${el.resistant} 
          Weaknesses: ${el.weaknesses}
-         Type ${el.type}`;
-    let $clone = document.importNode($template, true);
+         Type: ${el.type}`;
+    const $clone = document.importNode($template, true);
     $fragment.appendChild($clone);
   });
   $container.appendChild($fragment);
@@ -96,7 +97,8 @@ eventFeature();
 
 // este es el evento del filtro nombre 
 const botonSearch = document.getElementById("search");
-botonSearch.addEventListener("click", botonName);
+botonSearch.addEventListener("click", weakOrder);
+
 function botonName(event) {
   event.preventDefault();
   const inputName = document.getElementById("name").value;
@@ -116,16 +118,27 @@ function botonName(event) {
 //filtro del Orden alfabético
 const ordenar = document.getElementById("orderSelect");
 const buttonOrder = document.getElementById("button__order");
-console.log(buttonOrder);//este sirve para comprobar que estamos jalando bien el boton
+//console.log(buttonOrder);//este sirve para comprobar que estamos jalando bien el boton
 buttonOrder.addEventListener("click",orderABC); 
 function orderABC(){
   const selected= ordenar.options[ordenar.selectedIndex].text;
-  console.log(selected);//este sirve para ver si estamos jalando bien la opción
+  //console.log(selected);//este sirve para ver si estamos jalando bien la opción
   const ordenpokemones = abcOrder(pokemones,selected);//esta es la función que hicimos en data.js
-  console.log(ordenpokemones);//este sirve para ver si ordena bien
+  //console.log(ordenpokemones);//este sirve para ver si ordena bien
   const $container = document.querySelector(".section3");//con este borramos los pokemones del inicio
   $container.innerHTML = "";//con este borramos los pokemones del inicio
   ordenpokemones.forEach(pokemon => { 
     drawCards(pokemon) });
   eventFeature();
 }
+
+const weakSelect = document.getElementById("weakSelect")
+
+function weakOrder () {
+  const inputWeak = weakSelect.options[weakSelect.selectedIndex].text;
+  console.log(inputWeak);
+  const pruebaaa = weakPokemon(pokemones,inputWeak);
+  console.log(pruebaaa);
+}
+
+

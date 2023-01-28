@@ -1,23 +1,60 @@
-import { example, anotherExample } from '../src/data.js';
+import { namePokemon, idPokemon, abcOrder } from '../src/data.js';
+const data=[
+  {
+    "name": "bulbasaur",
+    "num": "001",
+  },
+  {
+    "name": "pikachu",
+    "num": "025"
+  },
+  {
+    "name": "ivysaur",
+    "num": "002"
+  }
+]
 
-
-describe('example', () => {
+describe('namePokemon', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof namePokemon).toBe('function');
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+  it('devolver toda la información del pokemon', () =>{
+    expect(namePokemon(data,"ivysaur")).toEqual([{
+      "name": "ivysaur",
+      "num": "002"
+    }])
+  })
 });
 
-
-describe('anotherExample', () => {
+describe('idPokemon', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof idPokemon).toBe('function');
   });
+  it('devolver pokemon por id', () =>{
+    expect(idPokemon(data,"025")).toEqual([{
+      "name": "pikachu",
+      "num": "025"
+    }])
+  })
+});
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+describe('abcOrder', () => {
+  it('is a function', () => {
+    expect(typeof abcOrder).toBe('function');
   });
+  it('devolver pokemones ordenados alfabeticamente', () =>{
+    expect(abcOrder(data,'A-Z')).toEqual([
+      {
+        "name": "bulbasaur",
+        "num": "001",
+      },
+      {
+        "name": "ivysaur",
+        "num": "002"
+      },
+      {
+        "name": "pikachu",
+        "num": "025"
+      }])
+  })
 });
