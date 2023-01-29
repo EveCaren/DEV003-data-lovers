@@ -22,15 +22,42 @@ export function idPokemon(data, num) {
   }
   return filtroNum
 }
+//filtrar por tipo 
+export function typePokemon(data, typ) {
+  const filtroType = [];
+  const typePoke = typ;
+  for (let i = 0; i < data.length; i++) {
+    const typeData = data[i].type;
+    for (let j = 0; j < typeData.length; j++) {
+      if (typeData[j] === typePoke) {
+        filtroType.push(data[i]);
+      }
+    }
+  }
+  return filtroType;
+}
+//filtrar por resistencia
+export function resisPokemon(data, resist){ 
+  const filtroResis = [];
+  const resisPoke = resist;
+  for(let i = 0; i < data.length; i++){
+    const resisData = data[i].resistant;
+    for (let j = 0; j < resisData.length; j++) {
+      if (resisData[j] === resisPoke) {
+        filtroResis.push(data[i]);
+      }
+    }
+  }
+  return filtroResis;
+}
 //filtrar por debilidad 
 export function weakPokemon(data, weak) {
   const filtroWeak = [];
   const weakPoke = weak;
   for (let i = 0; i < data.length; i++) {
     const weakData = data[i].weaknesses;
-
     for (let j = 0; j < weakData.length; j++) {
-      if (data[i].weaknesses === weakPoke) {
+      if (weakData[j] === weakPoke) {
         filtroWeak.push(data[i]);
       }
     }

@@ -1,4 +1,4 @@
-import { namePokemon, idPokemon, abcOrder, weakPokemon } from './data.js';
+import { namePokemon, idPokemon, abcOrder, weakPokemon, typePokemon, resisPokemon } from './data.js';
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 const pokemones = data.pokemon; //creamos un variable que iba a contener los datos para poder acceder a ellos.
@@ -54,18 +54,13 @@ function drawFeature(pokemon) {
     $template.querySelector("img").setAttribute("src", el.img);
     $template.querySelector("img").setAttribute("alt", el.num);
     $template.querySelector("p").textContent = `No. ${el.num}`;
-    $template.querySelector(".group2").textContent = `
-         Height: ${el.size.height} 
-        Height: ${el.size.height} 
+    $template.querySelector(".group2").textContent = ` 
          Height: ${el.size.height} 
          Weight: ${el.size.weight}
          Pokemon Rarity: ${el["pokemon-rarity"]}`;
     $template.querySelector(".group3").textContent = `
          About: ${el.about}`;
     $template.querySelector(".group4").textContent = `
-         Type: ${el.type}
-         Resistant: ${el.resistant} 
-         Resistant: ${el.resistant} 
          Resistant: ${el.resistant} 
          Weaknesses: ${el.weaknesses}
          Type: ${el.type}`;
@@ -97,18 +92,21 @@ eventFeature();
 
 // este es el evento del filtro nombre 
 const botonSearch = document.getElementById("search");
+botonSearch.addEventListener("click", botonName);
+botonSearch.addEventListener("click", typeOrder);
+botonSearch.addEventListener("click", resOrder);
 botonSearch.addEventListener("click", weakOrder);
 
-function botonName(event) {
-  event.preventDefault();
+
+function botonName() {
   const inputName = document.getElementById("name").value;
   const pokemon = namePokemon(pokemones, inputName);//aquí probamos la función de data.js
   if (pokemon.length === 0) {
     noFound();
   } else {
+    const $container = document.querySelector(".section3");
+    $container.innerHTML = "";
     pokemon.forEach(pokemon => {
-      const $container = document.querySelector(".section3");
-      $container.innerHTML = "";
       drawCards(pokemon);
     })
     eventFeature();
@@ -132,13 +130,41 @@ function orderABC(){
   eventFeature();
 }
 
-const weakSelect = document.getElementById("weakSelect")
+//función para el filtro debilidad
+const weakSelect = document.getElementById("weakSelect");
 
 function weakOrder () {
-  const inputWeak = weakSelect.options[weakSelect.selectedIndex].text;
-  console.log(inputWeak);
+  const inputWeak = weakSelect.options[weakSelect.selectedIndex].value;
+  // console.log(inputWeak);
   const pruebaaa = weakPokemon(pokemones,inputWeak);
-  console.log(pruebaaa);
+  // console.log(pruebaaa); //muestra el array 
+  const $container = document.querySelector(".section3");
+  $container.innerHTML = "";
+  pruebaaa.forEach(pokemon => {
+    drawCards(pokemon) });
+  eventFeature();
 }
 
+//función para el filtro tipo
+const typeSelect = document.getElementById("typeSelect");
+function typeOrder (){
+  const inputType = typeSelect.options[typeSelect.selectedIndex].value;
+  const prueba1= typePokemon(pokemones,inputType);
+  const $container = document.querySelector(".section3");
+  $container.innerHTML = "";
+  prueba1.forEach(pokemon =>{
+    drawCards(pokemon) });
+  eventFeature();
+}
 
+//función para el filtro resistencia
+const resSelect = document.getElementById("resSelect");
+function resOrder () {
+  const inputRes = resSelect.options[resSelect.selectedIndex].value;
+  const prueba2 = resisPokemon(pokemones,inputRes);
+  const $container = document.querySelector(".section3");
+  $container.innerHTML = "";
+  prueba2.forEach(pokemon => {
+    drawCards(pokemon) });
+  eventFeature();
+}
