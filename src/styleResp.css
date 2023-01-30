@@ -1,0 +1,19 @@
+/* medida para  una tablet de menos 991.98 px*/
+@media (min-width: 600px) {
+    body{
+        background: black;
+    }
+    .section3{
+        display: grid;
+        grid-template-columns: auto;
+        background: yellow; 
+    }
+    .card{
+        width: 100px;
+        height: 170px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        line-height: 13px;
+        background: yellow;
+    }
+}

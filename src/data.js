@@ -69,15 +69,15 @@ export function weakPokemon(data, weak) {
 // filtro por orden alfabético
 export function abcOrder(data, order) {
   const orderArray = data.slice().sort((a, b) => {
-    const nameA = a.name.toLowerCase();
-    const nameB = b.name.toLowerCase();
+    const nameA = a.name;
+    const nameB = b.name;
     if (nameA < nameB) {
       return -1;
     }
-    if (nameA > nameB) {
+    else {
       return 1;
     }
-    return 0;
+    //return 0;
   })
   if (order === 'A-Z') {
     return orderArray;

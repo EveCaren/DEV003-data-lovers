@@ -89,30 +89,6 @@ function noFound(){
 pokemones.forEach(pokemon => { drawCards(pokemon) });
 eventFeature();
 
-
-// este es el evento del filtro nombre 
-const botonSearch = document.getElementById("search");
-botonSearch.addEventListener("click", botonName);
-botonSearch.addEventListener("click", typeOrder);
-botonSearch.addEventListener("click", resOrder);
-botonSearch.addEventListener("click", weakOrder);
-
-
-function botonName() {
-  const inputName = document.getElementById("name").value;
-  const pokemon = namePokemon(pokemones, inputName);//aquí probamos la función de data.js
-  if (pokemon.length === 0) {
-    noFound();
-  } else {
-    const $container = document.querySelector(".section3");
-    $container.innerHTML = "";
-    pokemon.forEach(pokemon => {
-      drawCards(pokemon);
-    })
-    eventFeature();
-  }
-}
-
 //filtro del Orden alfabético
 const ordenar = document.getElementById("orderSelect");
 const buttonOrder = document.getElementById("button__order");
@@ -129,6 +105,41 @@ function orderABC(){
     drawCards(pokemon) });
   eventFeature();
 }
+
+// este es el evento de de los filtros 
+const botonSearch = document.getElementById("search");
+botonSearch.addEventListener("click", filterEvents);
+
+//este es la función para todas las funciones de los inputs
+function filterEvents () {
+  if (typeSelect.value !=="nulo"){
+    typeOrder();
+  } else if (resSelect.value !=="nulo"){
+    resOrder();
+  } else if(weakSelect.value !=="nulo") {
+    weakOrder();
+  }else{
+    filtroName();
+  }
+}
+
+function filtroName() {
+  const inputName = document.getElementById("name").value.toLowerCase();
+  console.log("inputName", inputName);
+  const pokemon1 = namePokemon(pokemones, inputName);//aquí probamos la función de data.js
+  console.log("pokemon", pokemon1);
+  if (pokemon1.length === 0) {
+    noFound();
+  } else {
+    const $container = document.querySelector(".section3");
+    $container.innerHTML = "";
+    pokemon1.forEach(pokemon => {
+      drawCards(pokemon);
+    })
+    eventFeature();
+  }
+}
+
 
 //función para el filtro debilidad
 const weakSelect = document.getElementById("weakSelect");
