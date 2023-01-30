@@ -177,6 +177,67 @@ describe('abcOrder', () => {
         ]
       }])
   })
+  it('devolver pokemones ordenados alfabeticamente', () => {
+    expect(abcOrder(data, 'Z-A')).toEqual([
+      {
+        "name": "pikachu",
+        "num": "025",
+        "type": [
+          "electric"
+        ],
+        "resistant": [
+          "electric",
+          "flying",
+          "steel"
+        ],
+        "weaknesses": [
+          "ground"
+        ]
+      },
+      {
+        "name": "ivysaur",
+        "num": "002",
+        "type": [
+          "grass",
+          "poison"
+        ],
+        "resistant": [
+          "water",
+          "electric",
+          "grass",
+          "fighting",
+          "fairy"
+        ],
+        "weaknesses": [
+          "fire",
+          "ice",
+          "flying",
+          "psychic"
+        ]
+      },
+      {
+        "name": "bulbasaur",
+        "num": "001",
+        "type": [
+          "grass",
+          "poison"
+        ],
+        "resistant": [
+          "water",
+          "electric",
+          "grass",
+          "fighting",
+          "fairy"
+        ],
+        "weaknesses": [
+          "fire",
+          "ice",
+          "flying",
+          "psychic"
+        ]
+      } 
+    ])
+  })
 });
 // test filtro debilidades
 describe('weakPokemon', () => {
