@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Chewy" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <img class="logoPoke" src="img/pokemonLogo.png" alt="logo">
+    </header>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="index.html">Pokedex</a></li>
+        <li><a href="index3.html">Stadistics</a></li>
+      </ul>
+    </nav>
+    
+    <main class = "mainPrincipal">
+        <div class="tittle">
+          <h2>Search Pokemon</h2>
+        </div>
+      <section class="section1">
+        <div class="search">
+          <h3>Filter</h3>
+        </div>
+        <section class = "sectionAbc"> 
+          <label class="nameLabel" for="orderLabel">Order</label>
+          <select name="orderSelect" id="orderSelect">
+            <option value="ascendente">A-Z</option>
+            <option value="descendente">Z-A</option>
+          </select>
+          <button type="submit" id="button__order" class="button__order">Order</button>
+        </section>
+        <!-- Sección de inputs -->
+        <section class="section2">
+            <label class="nameLabel">Name</label>
+            <input class="nameInput" id="name" type="text">
+            <label class="nameLabel">Type</label>
+            <select name="typeSelect" id="typeSelect">
+              <option value="nulo">Select</option>
+              <option value="normal">normal</option>
+              <option value="fire">fire</option>
+              <option value="water">water</option>
+              <option value="grass">grass</option>
+              <option value="electric">electric</option>
+              <option value="ice">ice</option>
+              <option value="fighting">fighting</option>
+              <option value="poison">poison</option>
+              <option value="ground">ground</option>
+              <option value="flying">flying</option>
+              <option value="psychic">psychic</option>
+              <option value="bug">bug</option>
+              <option value="rock">rock</option>
+              <option value="ghost">ghost</option>
+              <option value="dragon">dragon</option>
+              <option value="dark">dark</option>
+              <option value="steel">steel</option>
+              <option value="fairy">fairy</option>
+            </select>
+            <label class="nameLabel">Resistant</label>
+            <select name="resSelect" id="resSelect">
+              <option value="nulo">Select</option>
+              <option value="normal">normal</option>
+              <option value="fire">fire</option>
+              <option value="water">water</option>
+              <option value="grass">grass</option>
+              <option value="electric">electric</option>
+              <option value="ice">ice</option>
+              <option value="fighting">fighting</option>
+              <option value="poison">poison</option>
+              <option value="ground">ground</option>
+              <option value="flying">flying</option>
+              <option value="psychic">psychic</option>
+              <option value="bug">bug</option>
+              <option value="rock">rock</option>
+              <option value="ghost">ghost</option>
+              <option value="dragon">dragon</option>
+              <option value="dark">dark</option>
+              <option value="steel">steel</option>
+              <option value="fairy">fairy</option>
+            </select>
+            <label class="nameLabel">Weaknesses</label>
+            <select name="weakSelect" id="weakSelect">
+              <option value="nulo">Select</option>
+              <option value="normal">normal</option>
+              <option value="fire">fire</option>
+              <option value="water">water</option>
+              <option value="grass">grass</option>
+              <option value="electric">electric</option>
+              <option value="ice">ice</option>
+              <option value="fighting">fighting</option>
+              <option value="poison">poison</option>
+              <option value="ground">ground</option>
+              <option value="flying">flying</option>
+              <option value="psychic">psychic</option>
+              <option value="bug">bug</option>
+              <option value="rock">rock</option>
+              <option value="ghost">ghost</option>
+              <option value="dragon">dragon</option>
+              <option value="dark">dark</option>
+              <option value="steel">steel</option>
+              <option value="fairy">fairy</option>
+            </select>  
+        </section>
+        <div class="button">
+          <button type="submit" id="search">Search</button>
+        </div>
+      </section>
+      <section class="section3" id="section3">
+      </section>
+    <div>
+      <a href="#" class="rise">Rise</a>
+    </div>
+    </main>
+    <script src="main.js" type="module"></script>
+
+    <footer class="footer">
+      <div class="izquierda">
+        <p>©2022 Pokémon. ©1995</p>
+        <p> 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM,</p>
+        <p>®Nintendo.</p>
+          
+      </div>
+      <div class="redes">
+        <a href="#"><img src="./img/instagran circulo color.png" alt="Instagram"></a>
+        <a href="#"><img src="./img/facebook circulo azul.png" alt="Facebook"></a>
+        <a href="#"><img src="./img/tuiter circulo color.png" alt="Twiter"></a>
+        <a href="#"><img src="./img/youtube circulo rojo.png" alt="Youtube"></a>
+      </div>
+      <div class="derecha">
+        <p>Technical Support</p>
+        <p>Privacy Notice</p>
+        <p>Legal Information</p>
+      </div>
+      
+    </footer>
+    <!-- tarjetas de inicio -->
+    <template class="template__card" id="template__card">
+      <figure class="card">
+        <img>
+        <figcaption></figcaption>
+        <p></p>
+        <button class="feature">Feature</button>
+      </figure>
+    </template>
+    <!-- card con características específicas -->
+    <template class="card__pokemon" id="card__pokemon">
+     <div class="group__title">
+      <h1></h1>
+     </div> 
+      <div class="group1">
+        <figure class="card_character">
+          <img>
+          <p></p>
+        </figure>
+      </div>
+      <div class="group2"></div>
+      <div class="group3"></div>
+      <div class="group4"></div>
+      <button  type="submit" id="newSearch">New search</button>
+    </template>
+    <template class="noFound" id="noFound">
+      <figure class="pikachu_noFound">
+        <img>
+        <figcaption></figcaption>
+      </figure>
+    </template>
+  </body>
+</html>
