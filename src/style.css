@@ -4,10 +4,10 @@
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    margin: 0;
+    margin: -8px;
 }
 .main__inicio{
-    padding: 18% 0%;
+    padding: 18rem 0rem;
 }
 .menu__inicio{
     width: 96%;
@@ -58,7 +58,7 @@
     color: #FACA03;
 }
 .mainPrincipal{
-    background-color: #D9D9D9;
+    background-color: aliceblue;
     width: 98.5%;
     padding: 0.5% 0% 0.5%;
     margin-left: 1%;
@@ -87,7 +87,7 @@
 .sectionAbc{
     padding: 0rem 3rem;
 }
-#orderSelect{
+#orderSelect, #weakSelect, #typeSelect, #resSelect{
     width: 15rem;
     height: 2.5rem;
     border-radius: 1rem;
@@ -106,8 +106,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .nameInput{
-    width: 15rem;
-    height: 2.5rem;
+    width: 14.5rem;
+    height: 2.3rem;
     border-radius: 1rem;
     font-size: 1.6rem;
 }
@@ -130,7 +130,7 @@
 .section3{
     display: grid;
     grid-template-columns: auto auto auto auto;
-   
+    background: aliceblue;
 }
 .card{
     width: 200px;
@@ -208,7 +208,7 @@
 }
 /* estilo a la cartilla de características */
 .group__title{
-    background-color: #D9D9D9;
+    background-color: aliceblue;
     font-family: chewy;
     color: #FACA03;
     -webkit-text-stroke: 1px black;

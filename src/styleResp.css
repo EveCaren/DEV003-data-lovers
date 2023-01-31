@@ -1,19 +1,190 @@
 /* medida para  una tablet de menos 991.98 px*/
-@media (min-width: 600px) {
-    body{
-        background: black;
-    }
-    .section3{
+@media (max-width: 991.98px) {
+    .section3 {
         display: grid;
-        grid-template-columns: auto;
-        background: yellow; 
+        grid-template-columns: auto auto;
+        background: aliceblue;
+        justify-content: center;
     }
-    .card{
-        width: 100px;
-        height: 170px;
+
+    .card {
+        width: 200px;
+        height: 270px;
         border-radius: 10px;
         font-size: 1.5rem;
         line-height: 13px;
-        background: yellow;
+    }
+
+    .pikachu_noFound {
+        font-size: 1rem;
+    }
+}
+
+/* medida para  un teléfonode menos 600 px*/
+@media (max-width: 600px) {
+    .main__inicio{
+        padding: 80rem 0rem;
+    }
+    .menu {
+        background-color: #1F3956;
+        background-position: center center;
+        width: 96%;
+        display: flex;
+        margin: auto;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0px;
+    }
+
+    .menu li a {
+        font-size: 1.3rem;
+        font-family: chewy;
+        text-decoration: none;
+        color: #FACA03;
+    }
+
+    .tittle {
+        color: #FACA03;
+        text-align: center;
+        font-family: chewy;
+        font-size: 1.6rem;
+        -webkit-text-stroke: 0.2px black;
+    }
+
+    .search {
+        color: #FACA03;
+        text-align: center;
+        font-size: 1.7rem;
+        font-family: chewy;
+        letter-spacing: 0.2rem;
+        padding: 0.1rem;
+    }
+
+    #search,
+    #button__order {
+        margin-top: 1rem;
+        color: #FACA03;
+        background-color: #1F3956;
+        padding: 3px 12px;
+        border-color: #FACA03;
+        border-radius: 0.7rem;
+        font-size: 1rem;
+        font-family: chewy;
+        letter-spacing: 0.1rem;
+    }
+
+    .section3 {
+        display: grid;
+        grid-template-columns: auto;
+        background: aliceblue;
+        justify-content: center;
+    }
+
+    .card {
+        width: 200px;
+        height: 270px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        line-height: 13px;
+    }
+
+    .section2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 3rem 3rem 1rem 3rem;
+    }
+
+    #orderSelect,
+    #weakSelect,
+    #typeSelect,
+    #resSelect {
+        width: 10rem;
+        height: 2rem;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        display: block;
+        text-align-last: center;
+    }
+
+    .nameInput {
+        width: 9.5rem;
+        height: 1.7rem;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .nameLabel {
+        color: white;
+        font-size: 1.2rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .footer {
+        margin-top: auto;
+        width: 100%;
+        height: 100%;
+        background: #1F3956;
+        color: #FACA03;
+        font-size: 0.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0px 0px;
+        border-radius: 2%;
+    }
+
+    .footer .redes img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px;
+    }
+    .group__title {
+        -webkit-text-stroke: 0.1px black;
+        letter-spacing: 0.3rem;
+        font-size: 1.3rem;
+    }
+    .group1{
+        font-size: 0.8rem;
+        border-style: solid;
+        border-radius: 0.5rem;
+        border-color: #FACA03; 
+        background-color: #1F3956;
+        color: #FACA03;
+        font-family: Arial, Helvetica, sans-serif;
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+        width: 10rem;
+        text-align: center;
+        place-content: center;
+    }
+    .group1 img{
+        width: 100px;
+        height: 130px;
+        margin-top: 20px;
+    }
+    .group2{
+        font-size: 0.8rem;
+        border-radius: 0.5rem;
+        width: 15rem;
+        padding: 13px;
+    }
+    .group3{
+        font-size: 0.8rem;
+        border-radius: 0.5rem;
+        width: 15rem;
+        padding: 13px;
+    }
+    .group4{
+        font-size: 0.8rem;
+        border-radius: 0.5rem;
+        width: 15rem;
+        padding: 13px;
     }
 }
