@@ -74,10 +74,10 @@ export function abcOrder(data, order) {
     if (nameA < nameB) {
       return -1;
     }
-    if (nameA > nameB) {
+    else {
       return 1;
     }
-    return 0;
+    //return 0;
   })
   if (order === 'A-Z') {
     return orderArray;
