@@ -62,7 +62,7 @@
     }
 
     #search,
-    #button__order {
+    #button__order, #clear {
         margin-top: 1rem;
         color: #FACA03;
         background-color: #1F3956;

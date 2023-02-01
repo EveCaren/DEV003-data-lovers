@@ -41,6 +41,7 @@ function newSearch(){
     $container.innerHTML = "";
     pokemones.forEach(pokemon => { drawCards(pokemon) });
     eventFeature();
+    clear()
   })
 }
 //función que pinta las características específicas de cada pokemon
@@ -121,6 +122,15 @@ function filterEvents () {
   }else{
     filtroName();
   }
+}
+//limpia los filtros
+const botonClear = document.getElementById("clear");
+botonClear.addEventListener("click", clear)
+function clear () {
+  document.getElementById("name").value ="";
+  document.getElementById("typeSelect").value="nulo";
+  document.getElementById("resSelect").value="nulo";
+  document.getElementById("weakSelect").value="nulo";
 }
 
 function filtroName() {
