@@ -67,8 +67,8 @@ ordenando y buscando los pokémones de acuerdo a sus intereses.
 * [Prototipo de baja fidelidad](https://www.canva.com/design/DAFWQAo1aZM/vzfBAk6edUXs7ZfnLrOnsQ/view?utm_content=DAFWQAo1aZM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
   En este enlace está nuestro prototipo de bajafidelidad en CANVA.
   
-   * ![Maquetación Inicial 1](/src/img/prototipo1.jpg)
-   * ![Maquetación inicial 2](/src/img/prototipo2.jpg)
+   * ![Maquetación Inicial 1](prototipo1.jpg)
+   * ![Maquetación inicial 2](prototipo2.jpg)
 
 * [Prototipo de alta fidelidad](https://www.figma.com/file/FlrzECDAVmWneFul1D4Tuh/PortafolioDataLoversPokemon?node-id=0%3A1&t=Q3BJAX5x6MHDWKz6-1).
   En este enlace está nuestro prototipo de alta fidelidad en FIGMA.
