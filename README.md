@@ -74,4 +74,4 @@ ordenando y buscando los pokémones de acuerdo a sus intereses.
   En este enlace está nuestro prototipo de alta fidelidad en FIGMA.
   
 * [Git page Eve](https://evecaren.github.io/DEV003-data-lovers/)
-  [Git page Eli](https://cheilanthe.github.io/DEV003-data-lovers/)
+* [Git page Eli](https://cheilanthe.github.io/DEV003-data-lovers/)
